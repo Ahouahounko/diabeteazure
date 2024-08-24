@@ -2,7 +2,6 @@ from flask import Flask, request, render_template
 import pickle
 import numpy as np 
 import pandas as pd 
-from joblib import load
 
 
 app = Flask(__name__)
@@ -12,10 +11,6 @@ app = Flask(__name__)
 regmodel = pickle.load(open('regmodel.pkl', 'rb'))
 scalar = pickle.load(open('scaling.pkl', 'rb'))
 
-
-
-# regmodel = load('regmodel.joblib')
-# scalar = load('scaling.joblib')
 
 
 
