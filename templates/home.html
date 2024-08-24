@@ -1,0 +1,146 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabete progression</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css" >
+</head>
+
+
+
+<body>
+    <h4>Make your prediction</h4>
+    <form action="/predict" method="post">
+        <input type="text" name="age" placeholder="age" required><br>
+        <input type="text" name="bmi" placeholder="bmi" required><br>
+        <input type="text" name="bp" placeholder="bp" required><br>
+        <input type="text" name="s1" placeholder="s1" required><br>
+        <input type="text" name="s2" placeholder="s2" required><br>
+        <input type="text" name="s3" placeholder="s3" required><br>
+        <input type="text" name="s4" placeholder="s4" required><br>
+        <input type="text" name="s5" placeholder="s5" required><br>
+        <input type="text" name="s6" placeholder="s6" required><br>
+       
+        <button type="submit">Predict</button>
+    </form>
+
+    <br>
+    <br>
+
+</div>
+{{prediction_text}}
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabete Progression</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="text">Diabete Progression</div>
+        <form action="/predict" method="post">
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="age" required>
+                    <div class="underline"></div>
+                    <label>Age</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="bmi" required>
+                    <div class="underline"></div>
+                    <label>BMI</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="bp" required>
+                    <div class="underline"></div>
+                    <label>BP</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="s1" required>
+                    <div class="underline"></div>
+                    <label>S1</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="s2" required>
+                    <div class="underline"></div>
+                    <label>S2</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="s3" required>
+                    <div class="underline"></div>
+                    <label>S3</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="s4" required>
+                    <div class="underline"></div>
+                    <label>S4</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="s5" required>
+                    <div class="underline"></div>
+                    <label>S5</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="s6" required>
+                    <div class="underline"></div>
+                    <label>S6</label>
+                </div>
+            </div>
+            <div class="form-row submit-btn">
+                <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" value="Predict">
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="prediction">
+            {{prediction_text}}
+        </div>
+    </div>
+</body>
+</html>
